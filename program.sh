@@ -30,6 +30,7 @@ else
 fi
 echo "The three sub-directories are created"
 ls -l
+
 #To create 10 files inside Data
 cd Data
 for i in {1..10}
@@ -46,6 +47,7 @@ done
 echo "In the Data directory 10 files are created"
 cd ..
 cd Reports
+
 #To count number of lines in each file
 if [ -e summary.txt ]; then
   echo -e  "summary file exist.\n Removing it and creating a new one"
@@ -54,6 +56,7 @@ if [ -e summary.txt ]; then
 else
    touch summary.txt
 fi
+
 #File Processing
 cd ..
 cd Data
@@ -62,6 +65,7 @@ do
    echo "file$i : No of lines in file$i is $(wc -l file$i.txt)"  >>  ~/ProjectData/Reports/summary.txt
 done
 cat ~/ProjectData/Reports/summary.txt
+
 #creating the logdata file
 cd ..
 cd Logs
